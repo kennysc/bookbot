@@ -1,6 +1,16 @@
+
+'''
+Made this program in the boot.dev course "Build a Bookbot in Python".
+The program can read a text file a return the number of words in the file,
+as well as the occurence of each lowered alpha character in the file.
+
+Kenny St-Cyr 2025-09-18
+'''
 import sys
 from stats import *
 
+# check that sys.argv as at least one item, item_1 = program,
+# item_2 = argument/path
 if len(sys.argv) != 2:
     print("Usage: python3 main.py <path_to_book>")
     sys.exit(1) 
