@@ -14,3 +14,19 @@ def char_count(text):
             char_dict[letter] = char_dict.get(letter, 0)
             char_dict[letter] += 1
     return char_dict
+
+def sort_on(items):
+    return items["num"]
+
+def reorder_dict(text):
+    listed = []
+
+    unordered_dict = char_count(text)
+    
+    for i in unordered_dict:
+        pair = {"char": i, "num": unordered_dict[i]}
+        listed.append(pair)
+    
+    listed.sort(reverse=True, key=sort_on)
+    return listed
+    
